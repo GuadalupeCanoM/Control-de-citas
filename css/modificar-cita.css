@@ -1,4 +1,8 @@
 
+*{
+  box-sizing: border-box;
+}
+
 body {
     font-family: "Bree Serif", serif, Arial;
     display: flex; 
@@ -20,6 +24,27 @@ main {
     flex: 1; /* Hace que el main ocupe el espacio disponible entre header y footer */ 
     padding: 20px; /* Añadir margen a los lados */  
  }
+
+ tr{
+  background-color: #f3e4f1; 
+
+ }
+
+ td{
+  background-color: #e6ecf1; 
+ }
+
+ table, tr, th, td{
+  border: 1px solid #030303;
+  border-collapse: collapse;
+  
+ }
+
+ tr, th, td{
+  padding: 20px;
+ }
+
+ 
 
  footer {
   background-color: #e6ecf1;

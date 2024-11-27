@@ -19,11 +19,8 @@ header {
 .formulario-container {
   align-items: center; /* Centra el contenido verticalmente */
   display: flex;
-  flex-grow: 1; /* Hace que el main ocupe el espacio disponible entre header y footer */
   justify-content: center; /* Centra el contenido horizontalmente */
   padding: 20px;
-  
-  
 }
 
 #formulario-nueva-cita {
@@ -32,7 +29,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 800px; 
+  max-width: 500px; 
   padding: 20px;
   width: 80%; /* Ajustar el ancho para que ocupe más espacio */
 }
@@ -59,23 +56,28 @@ h3{
 
 .mb-3 {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  margin-bottom: 15px;
 }
 
 .mb-3 label {
-  flex: 1;
   text-align: left;
   cursor: pointer;
 }
 
 .mb-3 input, .mb-3 textarea {
-  flex: 2;
   padding: 8px;
+  margin: 5px 0;
 }
 
 input, textarea{
   margin: 5px;
+}
+
+.error{
+  color:red;
+  font-size: 12px; 
+  margin-top: 5px; 
 }
 
 .guardar-cita {

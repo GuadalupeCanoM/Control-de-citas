@@ -39,7 +39,7 @@
 
           <!--Fecha y hora-->
           <div class="mb-3">
-            <label for="fecha-hora" class="form-label">Fecha y Hora de la cita</label>
+            <label for="fecha-hora" class="form-label">Fecha y Hora de la cita: L-V de 9h-21h</label>
             <input type="datetime-local" class="form-control" id="fecha-hora" name="fecha-hora" required tabindex="0">
             <span class="error" id="error-fecha"></span>
           </div>
@@ -48,15 +48,15 @@
 
           <!--DNI-->
           <div class="mb-3">
-            <label for="dni" class="form-label">DNI</label>
-            <input type="text" class="form-control" id="dni" name="dni" required tabindex="0" placeholder="Debe contener 8 números y 1 letra">
+            <label for="dni" class="form-label">DNI / NIE</label>
+            <input type="text" class="form-control" id="dni" name="dni" required tabindex="0" placeholder="Debe contener números y letras válidas ">
             <span class="error" id="error-dni"></span>
           </div>
           
           <!--Nombre-->
           <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre" name="nombre" required tabindex="0">
+            <input type="text" class="form-control" id="nombre" name="nombre" requiered tabindex="0" value="">
             <span class="error" id="error-nombre"></span>
           </div>
           
@@ -89,7 +89,7 @@
           
           <!--Botón enviar-->
           <div class="mb-3">
-            <input type="submit" class="btn btn-primary" id="enviar"value="Confirmar cita"></i>
+            <input type="submit" class="btn btn-primary" id="enviar" value="Confirmar cita"></i>
           </div>
         </form>
     </main>
