@@ -42,6 +42,7 @@ function validarFechaHora() {
 }
 
 // -----------------------Validar DNI/NIE-----------------------------//
+
 document.getElementById('dni').addEventListener('blur', validarDNI);
 
 function validarDNI() {
@@ -54,7 +55,7 @@ function validarDNI() {
 
     // Validar el campo de DNI/NIE
     if (dni === '') {
-        errorDNI.textContent = 'El DNI es obligatorio.';
+        errorDNI.textContent = 'El DNI/NIE es obligatorio.';
         return false;
     } else if (!dniRegex.test(dni) && !nieRegex.test(dni)) {
         errorDNI.textContent = 'El DNI/NIE no es válido.';
@@ -90,6 +91,7 @@ function validarNombre() {
 }
 
 // -----------------------Validar Apellidos-----------------------------//
+
 document.getElementById('apellidos').addEventListener('blur', validarApellidos);   
 
 function validarApellidos() {
