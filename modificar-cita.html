@@ -1,83 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Página web de citas de la clínica dental MedacDent" />
-    <meta name="keywords" content="citas,clinicadental" />
-    <meta name="author" content="Guadalupe Cano" />
-    <title>MedacDent - Gestión de citas</title>
-    
-    <!--Importo la fuente online-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
-    <!--Favicon-->
-    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
-    <!--Ruta del Css-->
-    <link rel="stylesheet" href="css/modificar-cita.css" />
-  </head>
 
-  <body>
-    <!--CABECERA-->
-    <header>
-      <div id="logo">
-        <!--Pulsando el logo redirige a la página principal-->
-        <a href="index.html">
-          <img src="img/logo.svg" alt="MedacDent Logo" />
-        </a>
-      </div>
-    </header>
-    <!--CUERPO PRINCIPAL-->
-    <main>
-      <table id="tabla-citas">
-        <thead>
-          <tr>
-            <th>NID</th>
-            <th>Nombre completo</th>
-            <th>Fecha cita</th>
-            <th>Teléfono</th>
-            <th>Info</th>
-            <th>Modificar cita</th>
-            <th>Eliminar cita</th>
-          </tr>
-        </thead>
-          <tbody>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-          </tbody>
-      </table>
-      
-    </main>
-    <!--PIE DE PÁGINA-->
-    <footer>
-      <div id="logo-footer">
-        <a tabindex="0" href="index.html">
-          <img src="img/logo-footer.svg" alt="MedacDent Logo" width="30px" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Página web de citas de la clínica dental MedacDent" />
+  <meta name="keywords" content="citas,clinicadental" />
+  <meta name="author" content="Guadalupe Cano" />
+  <title>MedacDent - Gestión de citas</title>
+
+  <!--Importo la fuente online-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+  <!--Favicon-->
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+  <!--Ruta del Css-->
+  <link rel="stylesheet" href="css/modificar-cita.css" />
+</head>
+
+<body>
+  <!--CABECERA-->
+  <header>
+    <div id="logo">
+      <!--Pulsando el logo redirige a la página principal-->
+      <a href="index.html">
+        <img src="img/logo.svg" alt="MedacDent Logo" />
+      </a>
+    </div>
+  </header>
+  <!--CUERPO PRINCIPAL-->
+  <main>
+    <table id="tabla-citas">
+      <h2>Lista de citas</h2>
+      <thead>
+        <tr>
+          <th>NID</th>
+          <th>Nombre completo</th>
+          <th>Fecha cita</th>
+          <th>Teléfono</th>
+          <th>Info</th>
+          <th>Modificar cita</th>
+          <th>Eliminar cita</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="NID">12345678A</td>
+          <td data-label="Nombre completo">Pedro Álvarez</td>
+          <td data-label="Fecha cita">27-11-2024</td>
+          <td data-label="Teléfono">123456789</td>
+          <td data-label="Info">Detalles</td>
+          <td data-label="Modificar cita"><button class="botones">Modificar</button></td>
+          <td data-label="Eliminar cita"><button class="botones">Eliminar</button></td>
+        </tr>
+        <!-- Más filas -->
+        <tr>
+          <td data-label="NID">12345678A</td>
+          <td data-label="Nombre completo">Pedro Álvarez</td>
+          <td data-label="Fecha cita">27-11-2024</td>
+          <td data-label="Teléfono">123456789</td>
+          <td data-label="Info">Detalles</td>
+          <td data-label="Modificar cita"><button class="botones">Modificar</button></td>
+          <td data-label="Eliminar cita"><button class="botones">Eliminar</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </main>
+  <!--PIE DE PÁGINA-->
+  <footer>
+    <div id="logo-footer">
+      <a tabindex="0" href="index.html">
+        <img src="img/logo-footer.svg" alt="MedacDent Logo" width="30px" />
         <span>MedacDent®</span>
-        </a>
-      </div>
-      <address id="contacto">
-        <p>Contacto: 123-456-7890 </p>
-        <p>clinidental@medacDent.com</p>  
-        <p>Dirección: Calle Ejemplo 123, Ciudad</p>
-      </address>
-      <div id="social">
-        <a href="https://www.facebook.com" target="_blank">
-          <img src="img/facebook.svg" alt="Facebook" class="redes-sociales"/>
-        </a>
-        <a href="https://www.instagram.com" target="_blank">
-          <img src="img/instagram.svg" alt="Instagram" class="redes-sociales"/>
-        </a>
-        <a href="https://x.com/" target="_blank">
-          <img src="img/X.svg" alt="X" class="redes-sociales"/>
-        </a>
-      </div>
-    </footer>
-  </body>
+      </a>
+    </div>
+    <address id="contacto">
+      <p>Contacto: 123-456-7890 </p>
+      <p>clinidental@medacDent.com</p>
+      <p>Dirección: Calle Ejemplo 123, Ciudad</p>
+    </address>
+    <div id="social">
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="img/facebook.svg" alt="Facebook" class="redes-sociales" />
+      </a>
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="img/instagram.svg" alt="Instagram" class="redes-sociales" />
+      </a>
+      <a href="https://x.com/" target="_blank">
+        <img src="img/X.svg" alt="X" class="redes-sociales" />
+      </a>
+    </div>
+  </footer>
+</body>
+
 </html>
