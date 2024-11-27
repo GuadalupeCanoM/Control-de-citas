@@ -40,23 +40,23 @@ header {
 #nueva-cita,
 #modificar-cita {
   background-color: #f9f9f9;
-  border: 2px solid #f0bbe7;
+  border: 1px solid #f0bbe7;
   border-radius: 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   color: #3a72be;
   margin: 20px;
-  max-height: 200px; /* Altura máxima para evitar que se estiren los recuadros */
-  max-width: 300px; /* Ancho máximo para evitar que se estiren los recuadros*/
+  max-height: 200px; 
+  max-width: 300px; 
   padding: 20px;
   text-align: center;
 }
 
 #nueva-cita:hover,
 #modificar-cita:hover {
-  /*Cuando paso el cursor el recuadro hace un efecto*/
-  border-radius: 35px;
-  border: 2px solid #f0bbe7;
-  transition: 0.5s linear;
+  border: 1px solid #3a72be;
+  color: rgb(0, 0, 0);
+  outline: none;
+  box-shadow: 3px 0px 30px rgba (163,163,163, 0.4);
 }
 
 #nueva-cita a:link, a:visited, a:hover, a:active,

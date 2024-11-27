@@ -36,7 +36,8 @@
         <!--Formulario-->
         <form id="formulario-nueva-cita">
           <h2>Formulario de nueva cita</h2>
-          
+
+          <!--Fecha y hora-->
           <div class="mb-3">
             <label for="fecha-hora" class="form-label">Fecha y Hora de la cita</label>
             <input type="datetime-local" class="form-control" id="fecha-hora" name="fecha-hora" required tabindex="0">
@@ -44,43 +45,52 @@
           </div>
           
           <h3>Datos del Paciente</h3>
-          
+
+          <!--DNI-->
           <div class="mb-3">
             <label for="dni" class="form-label">DNI</label>
             <input type="text" class="form-control" id="dni" name="dni" required tabindex="0" placeholder="Debe contener 8 números y 1 letra">
             <span class="error" id="error-dni"></span>
           </div>
           
+          <!--Nombre-->
           <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
             <input type="text" class="form-control" id="nombre" name="nombre" required tabindex="0">
             <span class="error" id="error-nombre"></span>
           </div>
           
+          <!--Apellidos-->
           <div class="mb-3">
             <label for="apellidos" class="form-label">Apellidos</label>
             <input type="text" class="form-control" id="apellidos" name="apellidos" required  tabindex="0">
             <span class="error" id="error-apellidos"></span>
           </div>
           
+          <!--Teléfono-->
           <div class="mb-3">
             <label for="telefono" class="form-label">Teléfono</label>
             <input type="tel" class="form-control" id="telefono" name="telefono" required pattern="[0-9]{9}$" placeholder="Debe contener 9 dígitos numéricos" tabindex="0">
             <span class="error" id="error-telefono"></span>
           </div>
           
+          <!--Fecha de Nacimiento-->
           <div class="mb-3">
             <label for="fecha-nacimiento" class="form-label">Fecha de Nacimiento</label>  
             <input type="date" class="form-control" id="fecha-nacimiento" name="fecha-nacimiento" required tabindex="0">
             <span class="error" id="error-fecha-nacimiento"></span>
           </div>
           
+          <!--Observaciones-->
           <div class="mb-3">
             <label for="observaciones" class="form-label">Observaciones</label>
             <textarea class="form-control" id="observaciones" name="observaciones" rows="6" tabindex="0"></textarea>
           </div>
           
-          <input type="submit" class="btn btn-primary" id="enviar"value="Confirmar cita"></i>
+          <!--Botón enviar-->
+          <div class="mb-3">
+            <input type="submit" class="btn btn-primary" id="enviar"value="Confirmar cita"></i>
+          </div>
         </form>
     </main>
 
