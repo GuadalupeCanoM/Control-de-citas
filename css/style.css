@@ -1,0 +1,139 @@
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  font-family: "Bree Serif", serif, Arial;
+  flex-direction: column;
+  height: 100vh; /* Hace que el body ocupe toda la altura de la ventana */
+}
+
+header {
+  background-color: #e6ecf1;
+  border-bottom: 1px solid #dacfcf;
+  padding: 1em;
+  text-align: center;
+}
+
+#citas {
+  align-items: center; /* Centra los elementos verticalmente */
+  display: flex;
+  flex: 1; /* Hace que el main ocupe el espacio disponible entre header y footer */
+  font-weight: bold;
+  justify-content: center;
+  padding: 20px; /* Añadir margen a los lados */
+}
+
+.cita-container {
+  align-items: center;
+  background-color: #e6ecf1; /* Color de fondo del recuadro principal */
+  border-radius: 8px; /* Bordes redondeados del recuadro principal */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; /* Para alinear los recuadros horizontalmente */
+  justify-content: center;
+  padding: 30px;
+}
+
+#nueva-cita,
+#modificar-cita {
+  background-color: #f9f9f9;
+  border: 2px solid #f0bbe7;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #3a72be;
+  margin: 20px;
+  max-height: 200px; /* Altura máxima para evitar que se estiren los recuadros */
+  max-width: 300px; /* Ancho máximo para evitar que se estiren los recuadros*/
+  padding: 20px;
+  text-align: center;
+}
+
+#nueva-cita:hover,
+#modificar-cita:hover {
+  /*Cuando paso el cursor el recuadro hace un efecto*/
+  border-radius: 35px;
+  border: 2px solid #f0bbe7;
+  transition: 0.5s linear;
+}
+
+#nueva-cita a:link, a:visited, a:hover, a:active,
+#modificar-cita a:link, a:visited, a:hover, a:active {
+  color: inherit; /* Mantiene el color del enlace */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+footer {
+  background-color: #e6ecf1;
+  border-top: 1px solid #dacfcf;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+#logo-footer {
+  align-items: center; 
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+#logo-footer a {
+  align-items: center;
+  color: inherit; /* Mantiene el color del enlace */
+  display: flex;
+  text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+
+#contacto {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: center;
+  text-align: center;
+}
+
+#contacto p {
+  margin: 5px;
+}
+
+#social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.redes-sociales {
+  width: 50px; 
+  height: 30px; 
+  
+}
+
+
+/* Media Queries para hacer la página responsive */
+@media (max-width: 989px) {
+  footer{
+    display: flex;
+    flex-direction: column;
+   
+  }
+
+  #logo-footer{
+    display: flex;
+    justify-content: center;
+  }
+
+  #social{
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+
+

@@ -1,0 +1,185 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  font-family: "Bree Serif", serif, Arial;
+  flex-direction: column;
+  height: 100vh; /* Hace que el body ocupe toda la altura de la ventana */
+}
+
+header {
+  background-color: #e6ecf1;
+  border-bottom: 1px solid #dacfcf;
+  padding: 1em;
+  text-align: center;
+}
+
+.formulario-container {
+  align-items: center; /* Centra el contenido verticalmente */
+  display: flex;
+  flex-grow: 1; /* Hace que el main ocupe el espacio disponible entre header y footer */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  padding: 20px;
+  
+}
+
+#formulario-nueva-cita {
+  background-color: #eff4f8; /* Color de fondo del recuadro principal */
+  border-radius: 8px; /* Bordes redondeados del recuadro principal */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 800px; 
+  padding: 20px;
+  width: 80%; /* Ajustar el ancho para que ocupe más espacio */
+}
+
+h2{
+  color:#f89de7
+}
+
+h2, h3{
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+h3{
+  margin-bottom:5px;
+  color: #3a72be;
+}
+
+.mb-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mb-3 label {
+  flex: 1;
+  text-align: left;
+}
+
+.mb-3 input, .mb-3 textarea {
+  flex: 2;
+  padding: 8px;
+}
+
+input, textarea{
+  margin: 5px;
+}
+
+.guardar-cita {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#enviar {
+  font-family: "Bree Serif", serif, Arial;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #3a72be;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#enviar:hover {
+  background-color: #f89de7;
+}
+
+footer {
+  background-color: #e6ecf1;
+  border-top: 1px solid #dacfcf;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+#logo-footer {
+  align-items: center; 
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+#logo-footer a {
+  align-items: center;
+  color: inherit; /* Mantiene el color del enlace */
+  display: flex;
+  text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+#contacto {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: center;
+  text-align: center;
+}
+
+#contacto p {
+  margin: 5px;
+}
+
+#social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.redes-sociales {
+  width: 50px; 
+  height: 30px; 
+  
+}
+
+/* Media Queries para hacer la página responsive */
+@media (max-width: 989px) {
+  
+  .formulario-container{
+    padding: 10px;
+  }
+
+  footer{
+    display: flex;
+    flex-direction: column;
+   
+  }
+
+  #logo-footer{
+    display: flex;
+    justify-content: center;
+  }
+
+  #social{
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 410px) {
+  #formulario-nueva-cita {
+    width: 95%; 
+    padding: 15px; 
+  }
+
+  .mb-3 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mb-3 label, .mb-3 input, .mb-3 textarea {
+    width: 100%;
+  }
+
+  .mb-3 input, .mb-3 textarea {
+    margin-top: 5px;
+  }
+}

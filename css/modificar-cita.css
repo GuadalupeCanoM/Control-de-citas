@@ -1,0 +1,95 @@
+
+body {
+    font-family: "Bree Serif", serif, Arial;
+    display: flex; 
+    flex-direction: column; 
+    height: 100vh; /* Hace que el body ocupe toda la altura de la ventana */ 
+  }
+
+  header {
+    background-color: #e6ecf1;
+    border-bottom: 1px solid #dacfcf;
+    padding: 1em;
+    text-align: center;
+  }
+
+main { 
+    align-items: center; /* Centra los elementos verticalmente */ 
+    display: flex; 
+    justify-content: center; 
+    flex: 1; /* Hace que el main ocupe el espacio disponible entre header y footer */ 
+    padding: 20px; /* Añadir margen a los lados */  
+ }
+
+ footer {
+  background-color: #e6ecf1;
+  border-top: 1px solid #dacfcf;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+#logo-footer {
+  align-items: center; 
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+#logo-footer a {
+  align-items: center;
+  color: inherit; /* Mantiene el color del enlace */
+  display: flex;
+  text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+
+#contacto {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: center;
+  text-align: center;
+}
+
+#contacto p {
+  margin: 5px;
+}
+
+#social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.redes-sociales {
+  width: 50px; 
+  height: 30px; 
+  
+}
+
+/* Media Queries para hacer la página responsive */
+@media (max-width: 989px) {
+  footer{
+    display: flex;
+    flex-direction: column;
+   
+  }
+
+  #logo-footer{
+    display: flex;
+    justify-content: center;
+  }
+
+  #social{
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+
+
+
