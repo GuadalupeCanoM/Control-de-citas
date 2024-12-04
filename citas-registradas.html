@@ -16,7 +16,7 @@
   <!--Favicon-->
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
   <!--Ruta del Css-->
-  <link rel="stylesheet" href="css/modificar-cita.css" />
+  <link rel="stylesheet" href="css/citas-registradas.css" />
 </head>
 
 <body>
@@ -31,7 +31,7 @@
   </header>
   <!--CUERPO PRINCIPAL-->
   <main>
-    <table id="tabla-citas">
+    <table id="tabla-citas" >
       <h2>Lista de citas</h2>
       <thead>
         <tr>
@@ -45,25 +45,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td data-label="NID">12345678A</td>
-          <td data-label="Nombre completo">Pedro Álvarez</td>
-          <td data-label="Fecha cita">27-11-2024</td>
-          <td data-label="Teléfono">123456789</td>
-          <td data-label="Info">Detalles</td>
-          <td data-label="Modificar cita"><button class="botones">Modificar</button></td>
-          <td data-label="Eliminar cita"><button class="botones">Eliminar</button></td>
-        </tr>
-        <!-- Más filas -->
-        <tr>
-          <td data-label="NID">12345678A</td>
-          <td data-label="Nombre completo">Pedro Álvarez</td>
-          <td data-label="Fecha cita">27-11-2024</td>
-          <td data-label="Teléfono">123456789</td>
-          <td data-label="Info">Detalles</td>
-          <td data-label="Modificar cita"><button class="botones">Modificar</button></td>
-          <td data-label="Eliminar cita"><button class="botones">Eliminar</button></td>
-        </tr>
+          <!--Las citas se registran aquí-->
+          
       </tbody>
     </table>
 
@@ -77,9 +60,9 @@
       </a>
     </div>
     <address id="contacto">
-      <p>Contacto: 123-456-7890 </p>
-      <p>clinidental@medacDent.com</p>
-      <p>Dirección: Calle Ejemplo 123, Ciudad</p>
+      <p>Contacto: 600121212 |</p>
+        <p>clinidental@medacDent.com |</p>  
+        <p>Dirección: Calle Ejemplo 123, Córdoba</p>
     </address>
     <div id="social">
       <a href="https://www.facebook.com" target="_blank">
@@ -93,6 +76,8 @@
       </a>
     </div>
   </footer>
+  <!--Enlazo el archivo JavaScript-->
+  <script src="js/citas-registradas.js"></script>
 </body>
 
 </html>

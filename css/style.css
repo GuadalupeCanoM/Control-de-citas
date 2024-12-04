@@ -38,7 +38,7 @@ header {
 }
 
 #nueva-cita,
-#modificar-cita {
+#citas-registradas {
   background-color: #f9f9f9;
   border: 1px solid #f0bbe7;
   border-radius: 4px;
@@ -52,7 +52,7 @@ header {
 }
 
 #nueva-cita:hover,
-#modificar-cita:hover {
+#citas-registradas:hover {
   border: 1px solid #3a72be;
   color: rgb(0, 0, 0);
   outline: none;
@@ -60,7 +60,7 @@ header {
 }
 
 #nueva-cita a:link, a:visited, a:hover, a:active,
-#modificar-cita a:link, a:visited, a:hover, a:active {
+#citas-registradas a:link, a:visited, a:hover, a:active {
   color: inherit; /* Mantiene el color del enlace */
   text-decoration: none; /* Elimina el subrayado del enlace */
 }

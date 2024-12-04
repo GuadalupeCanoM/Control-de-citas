@@ -16,8 +16,6 @@
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
     <!--Ruta del Css-->
     <link rel="stylesheet" href="css/nueva-cita.css" />
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
   </head>
 
   <body>
@@ -34,63 +32,74 @@
     <!--CUERPO PRINCIPAL-->
     <main class="formulario-container">
         <!--Formulario-->
-        <form id="formulario-nueva-cita">
+        <form id="formulario-nueva-cita" action="./citas-registradas.html" onsubmit="return validar()" method= "POST" >
           <h2>Formulario de nueva cita</h2>
 
-          <!--Fecha y hora-->
-          <div class="mb-3">
-            <label for="fecha-hora" class="form-label">Fecha y Hora de la cita: L-V de 9h-21h</label>
-            <input type="datetime-local" class="form-control" id="fecha-hora" name="fecha-hora" required tabindex="0">
-            <span class="error" id="error-fecha"></span>
-          </div>
-          
-          <h3>Datos del Paciente</h3>
+          <fieldset>
+            <legend class="cita">Fecha y hora de la cita: L-V de 9h-21h</legend>
+            <!--Fecha y hora-->
+              <div class="campos">
+                <input type="datetime-local" class="datos-usu" id="fecha-hora" name="fecha-hora" required tabindex="0">
+                <span class="error" id="error-fecha"></span>
+              </div>
+          </fieldset>
 
-          <!--DNI-->
-          <div class="mb-3">
-            <label for="dni" class="form-label">DNI / NIE</label>
-            <input type="text" class="form-control" id="dni" name="dni" required tabindex="0" placeholder="Debe contener números y letras válidas ">
-            <span class="error" id="error-dni"></span>
-          </div>
+          <fieldset>
+            <legend class="cita">Datos del paciente</legend>
+            <!--DNI-->
+              <div class="campos">
+                <label for="dni" class="descripcion">DNI / NIE</label>
+                <input type="text" class="datos-usu" id="dni" name="dni" required tabindex="0" pattern ="^[0-9]{8}[a-zA-Z]|^[XYZ][0-9]{7}[a-zA-Z]" placeholder="Debe contener números y letras válidas ">
+                <span class="error" id="error-dni"></span>
+              </div>
+              
+              <!--Nombre-->
+              <div class="campos">
+                <label for="nombre" class="descripcion">Nombre</label>
+                <input type="text" class="datos-usu" id="nombre" name="nombre" requiered tabindex="0" value="">
+                <span class="error" id="error-nombre"></span>
+              </div>
+              
+              <!--Apellidos-->
+              <div class="campos">
+                <label for="apellidos" class="descripcion">Apellidos</label>
+                <input type="text" class="datos-usu" id="apellidos" name="apellidos" required  tabindex="0">
+                <span class="error" id="error-apellidos"></span>
+              </div>
+              
+              <!--Teléfono-->
+              <div class="campos">
+                <label for="telefono" class="descripcion">Teléfono</label>
+                <input type="tel" class="datos-usu" id="telefono" name="telefono" required pattern="[0-9]{9}" placeholder="Debe contener 9 dígitos numéricos" tabindex="0">
+                <span class="error" id="error-telefono"></span>
+              </div>
+              
+              <!--Fecha de Nacimiento-->
+              <div class="campos">
+                <label for="fecha-nacimiento" class="descripcion">Fecha de Nacimiento</label>  
+                <input type="date" class="datos-usu" id="fecha-nacimiento" name="fecha-nacimiento" required tabindex="0">
+                <span class="error" id="error-fecha-nacimiento"></span>
+              </div>
+              
+              <!--Observaciones-->
+              <div class="campos">
+                <label for="observaciones" class="descripcion">Observaciones</label>
+                <textarea class="datos-usu" id="observaciones" name="observaciones" rows="6" tabindex="0"></textarea>
+              </div>
+          </fieldset>
           
-          <!--Nombre-->
-          <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre" name="nombre" requiered tabindex="0" value="">
-            <span class="error" id="error-nombre"></span>
+          <div class="enviarBorrar">
+            <!--Botón enviar-->
+            <input type="submit" class="btn btn-primary" id="enviar" value="Confirmar"></i>
+            <!--Botón borrar-->
+            <input type="reset" class="btn btn-primary" id="borrar" value="Borrar"></i>
           </div>
-          
-          <!--Apellidos-->
-          <div class="mb-3">
-            <label for="apellidos" class="form-label">Apellidos</label>
-            <input type="text" class="form-control" id="apellidos" name="apellidos" required  tabindex="0">
-            <span class="error" id="error-apellidos"></span>
-          </div>
-          
-          <!--Teléfono-->
-          <div class="mb-3">
-            <label for="telefono" class="form-label">Teléfono</label>
-            <input type="tel" class="form-control" id="telefono" name="telefono" required pattern="[0-9]{9}$" placeholder="Debe contener 9 dígitos numéricos" tabindex="0">
-            <span class="error" id="error-telefono"></span>
-          </div>
-          
-          <!--Fecha de Nacimiento-->
-          <div class="mb-3">
-            <label for="fecha-nacimiento" class="form-label">Fecha de Nacimiento</label>  
-            <input type="date" class="form-control" id="fecha-nacimiento" name="fecha-nacimiento" required tabindex="0">
-            <span class="error" id="error-fecha-nacimiento"></span>
-          </div>
-          
-          <!--Observaciones-->
-          <div class="mb-3">
-            <label for="observaciones" class="form-label">Observaciones</label>
-            <textarea class="form-control" id="observaciones" name="observaciones" rows="6" tabindex="0"></textarea>
-          </div>
-          
-          <!--Botón enviar-->
-          <div class="mb-3">
-            <input type="submit" class="btn btn-primary" id="enviar" value="Confirmar cita"></i>
-          </div>
+
+          <!--Mensaje de confirmación de la cita-->
+          <div id="mensaje-confirmacion"></div>
+
+          <!--Resumen de la cita-->
+          <div id="resumen-cita"></div>
         </form>
     </main>
 
@@ -102,11 +111,13 @@
         <span>MedacDent®</span>
         </a>
       </div>
+
       <address id="contacto">
-        <p>Contacto: 123-456-7890 </p>
-        <p>clinidental@medacDent.com</p>  
-        <p>Dirección: Calle Ejemplo 123, Ciudad</p>
+        <p>Contacto: 600121212 |</p>
+        <p>clinidental@medacDent.com |</p>  
+        <p>Dirección: Calle Ejemplo 123, Córdoba</p>
       </address>
+
       <div id="social">
         <a href="https://www.facebook.com" target="_blank">
           <img src="img/facebook.svg" alt="Facebook" class="redes-sociales"/>
@@ -118,6 +129,7 @@
           <img src="img/X.svg" alt="X" class="redes-sociales" id="X"/>
         </a>
       </div>
+
     </footer>
     <!--Enlazo el archivo JavaScript-->
     <script src="js/nueva-cita.js"></script>
